@@ -1,0 +1,12 @@
+<div class="carousel-filters">
+	<button type="button" data-action="reorder">Randomize Order</button>
+</div>
+<div class="carousel-items">
+	<% regions.forEach(function(id, index) { %>
+		<div id="<%= id %>" class="carousel-item <% if(index === 0) { %>active<% } %>"></div>
+	<% }) %>
+</div>
+<div class="carousel-navigation">
+	<button type="button" data-action="previous" disabled>&lsaquo; Previous</button>
+	<button type="button" data-action="next">Next &rsaquo;</button>
+</div>
