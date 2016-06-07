@@ -3,10 +3,10 @@
 </div>
 <div class="carousel-items">
 	<% regions.forEach(function(id, index) { %>
-		<div id="<%= id %>" class="carousel-item <% if(index === 0) { %>active<% } %>"></div>
+		<div id="<%= id %>" class="carousel-item"></div>
 	<% }) %>
 </div>
 <div class="carousel-navigation">
-	<button type="button" data-action="previous" disabled>&lsaquo; Previous</button>
+	<button type="button" data-action="previous">&lsaquo; Previous</button>
 	<button type="button" data-action="next">Next &rsaquo;</button>
 </div>

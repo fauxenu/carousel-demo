@@ -11,9 +11,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('compile-dev',  ['clean:dev', 'copy:dev', 'browserify:dev', 'less:dev']);
-	grunt.registerTask('compile-deploy',  ['clean:deploy', 'copy:deploy', 'browserify:deploy', 'less:deploy']);
+	grunt.registerTask('compile-deploy',  ['clean:deploy', 'copy:deploy', 'browserify:deploy', 'less:deploy', 'uglify']);
 	grunt.registerTask('compile', ['compile-dev', 'compile-deploy']);
 	grunt.registerTask('server', ['compile-dev', 'connect:all', 'watch']);
 	grunt.registerTask('default', ['compile']);

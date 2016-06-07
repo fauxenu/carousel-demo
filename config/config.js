@@ -8,7 +8,8 @@ module.exports = function (grunt) {
 		less: require('./less'),
 		connect: require('./connect'),
 		watch: require('./watch'),
-		clean: require('./clean')
+		clean: require('./clean'),
+		uglify: require('./uglify')
 	};
 
 	return config;
